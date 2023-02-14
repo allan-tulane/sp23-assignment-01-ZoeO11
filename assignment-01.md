@@ -12,36 +12,37 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 1. (2 pts ea) **Asymptotic notation** (12 pts)
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
-.  
+
+Yes. $2^{n+1} is in O(2^n) because $2^{n+1} is in O(2^n) if 2^{n+1} <= c(O(2^n)) for any value of c. In this case when c = 2, 2(2^n) = 2^n+1 and is therefore >= to 2^(n + 1)
 .  
 .  
 .  
 . 
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
 .  
-.  
+. no. $2^{2^n} is not in O(2^n) because $2^{2^n} is in O(2^n) if $2^{2^n} <= c(O(2^n)) for any c. In this case we can simplify by setting c to 2^x. We then get 2^n = x + n. 2^n is exponential while x+n is linear, and therefore no matter the value of x, when the limit is taken 2^{2^n} will always be larger.
 .  
 .  
 .  
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
 .  
 .  
-.  
+.  no
 .  
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
 .  
 .  
-.  
+.  yes
 .  
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
 .  
-.  
+.  no
 .  
 .  
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
 .  
-
+yes
 
 2. **SPARC to Python** (12 pts)
 
@@ -63,7 +64,7 @@ $$
   - 2b. (6 pts) What does this function do, in your own words?  
 
 .  
-.  
+.  This function gives you the fibbanaci number(assuming they are all in a numbered list from 0 to infinity) at the index entered
 .  
 .  
 .  
@@ -97,7 +98,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 .  
 .  
 .  
-.  
+.  Work and span are both O(n)
 .  
 .  
 .  
